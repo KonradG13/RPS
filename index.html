@@ -45,11 +45,11 @@ function playRound(playerSelection) {
     }
 }
 
-function game() {
+function playGame() {
 
 let playerScore = 0
 let computerScore = 0
-function totalScore (playerScore, computerScore) { return (" Player: " + playerScore + ", Computer: " + computerScore)}
+function getTotalScore (playerScore, computerScore) { return (" Player: " + playerScore + ", Computer: " + computerScore)}
 
 let playerInput = prompt("Rock, Paper or Scissors?")
 
@@ -57,7 +57,7 @@ if (playerInput.toUpperCase() === "ROCK" || playerInput.toUpperCase() === "PAPER
   let result = playRound(playerInput)
   if (result.includes("Player")){++playerScore} else if (result.includes("Computer")){++computerScore};
   
-  console.log(result + totalScore(playerScore, computerScore));
+  console.log(result + getTotalScore(playerScore, computerScore));
 
 } else { return "Game broken, try again!!"}
 
@@ -67,7 +67,7 @@ if (playerInput.toUpperCase() === "ROCK" || playerInput.toUpperCase() === "PAPER
   let result = playRound(playerInput)
   if (result.includes("Player")){++playerScore} else if (result.includes("Computer")){++computerScore};
   
-  console.log(result + totalScore(playerScore, computerScore));
+  console.log(result + getTotalScore(playerScore, computerScore));
 
 } else { return "Game broken, try again!!"}
 
@@ -77,7 +77,7 @@ if (playerInput.toUpperCase() === "ROCK" || playerInput.toUpperCase() === "PAPER
   let result = playRound(playerInput)
   if (result.includes("Player")){++playerScore} else if (result.includes("Computer")){++computerScore};
   
-  console.log(result + totalScore(playerScore, computerScore));
+  console.log(result + getTotalScore(playerScore, computerScore));
 
 } else { return "Game broken, try again!!"}
 
@@ -87,7 +87,7 @@ if (playerInput.toUpperCase() === "ROCK" || playerInput.toUpperCase() === "PAPER
   let result = playRound(playerInput)
   if (result.includes("Player")){++playerScore} else if (result.includes("Computer")){++computerScore};
   
-  console.log(result + totalScore(playerScore, computerScore));
+  console.log(result + getTotalScore(playerScore, computerScore));
 
 } else { return "Game broken, try again!!"}
 
@@ -97,7 +97,7 @@ if (playerInput.toUpperCase() === "ROCK" || playerInput.toUpperCase() === "PAPER
   let result = playRound(playerInput)
   if (result.includes("Player")){++playerScore} else if (result.includes("Computer")){++computerScore};
   
-  console.log(result + totalScore(playerScore, computerScore));
+  console.log(result + getTotalScore(playerScore, computerScore));
 
 } else { return "Game broken, try again!!"}
 
@@ -119,5 +119,10 @@ else {
 }
 
   </script>
+
+<div> 
+  <h1> Play 5 rounds of Rock, Paper Scissors!</h1>
+  <p> To play, enter the console (press F12, next select the "Console" tab) and type "playGame()"!</p>
+</div>
 </body>
 </html>
