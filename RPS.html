@@ -7,6 +7,117 @@
 <body>
   <script>
 
+function computerPlay() {
+    let items = ["Rock", "Paper", "Scissors"]
+    return items[Math.floor((Math.random()*items.length))]
+}
+
+function playRound(playerSelection) {
+  let computerSelection = computerPlay();
+    if (playerSelection.toUpperCase() === computerSelection.toUpperCase()) {
+        return "It's a tie! No one wins."
+    }
+    else {
+        if (playerSelection.toUpperCase() === "ROCK") {
+            if (computerSelection.toUpperCase() === "PAPER") {
+              return "Paper beats Rock. Computer wins."
+            }
+            else {
+              return "Rock beats Scissors. Player wins."                  
+            }
+        }
+        if (playerSelection.toUpperCase() === "PAPER") {
+            if (computerSelection.toUpperCase() === "ROCK"){
+              return "Paper beats Rock. Player wins."
+                }
+            else {
+              return "Scissors beat Paper. Computer wins."                  
+            }
+        }
+        if (playerSelection.toUpperCase() === "SCISSORS") {
+            if (computerSelection.toUpperCase() === "PAPER"){
+              return "Scissors beat Paper. Player wins."                
+            }
+            else {
+              return "Rock beats Scissors. Computer wins."            
+            }
+        }
+    }
+}
+
+function game() {
+
+let playerScore = 0
+let computerScore = 0
+function totalScore (playerScore, computerScore) { return (" Player: " + playerScore + ", Computer: " + computerScore)}
+
+let playerInput = prompt("Rock, Paper or Scissors?")
+
+if (playerInput.toUpperCase() === "ROCK" || playerInput.toUpperCase() === "PAPER" || playerInput.toUpperCase() === "SCISSORS") {
+  let result = playRound(playerInput)
+  if (result.includes("Player")){++playerScore} else if (result.includes("Computer")){++computerScore};
+  
+  console.log(result + totalScore(playerScore, computerScore));
+
+} else { return "Game broken, try again!!"}
+
+playerInput = prompt("Rock, Paper or Scissors - round 2?")
+
+if (playerInput.toUpperCase() === "ROCK" || playerInput.toUpperCase() === "PAPER" || playerInput.toUpperCase() === "SCISSORS") {
+  let result = playRound(playerInput)
+  if (result.includes("Player")){++playerScore} else if (result.includes("Computer")){++computerScore};
+  
+  console.log(result + totalScore(playerScore, computerScore));
+
+} else { return "Game broken, try again!!"}
+
+playerInput = prompt("Rock, Paper or Scissors - round 3?")
+
+if (playerInput.toUpperCase() === "ROCK" || playerInput.toUpperCase() === "PAPER" || playerInput.toUpperCase() === "SCISSORS") {
+  let result = playRound(playerInput)
+  if (result.includes("Player")){++playerScore} else if (result.includes("Computer")){++computerScore};
+  
+  console.log(result + totalScore(playerScore, computerScore));
+
+} else { return "Game broken, try again!!"}
+
+playerInput = prompt("Rock, Paper or Scissors - round 4?")
+
+if (playerInput.toUpperCase() === "ROCK" || playerInput.toUpperCase() === "PAPER" || playerInput.toUpperCase() === "SCISSORS") {
+  let result = playRound(playerInput)
+  if (result.includes("Player")){++playerScore} else if (result.includes("Computer")){++computerScore};
+  
+  console.log(result + totalScore(playerScore, computerScore));
+
+} else { return "Game broken, try again!!"}
+
+playerInput = prompt("Rock, Paper or Scissors - round 5?")
+
+if (playerInput.toUpperCase() === "ROCK" || playerInput.toUpperCase() === "PAPER" || playerInput.toUpperCase() === "SCISSORS") {
+  let result = playRound(playerInput)
+  if (result.includes("Player")){++playerScore} else if (result.includes("Computer")){++computerScore};
+  
+  console.log(result + totalScore(playerScore, computerScore));
+
+} else { return "Game broken, try again!!"}
+
+if (playerScore == computerScore) { 
+  playerScore = 0;
+  computerScore = 0;
+  return "It's a tie!"
+  }
+else if (playerScore> computerScore) { 
+  playerScore = 0;
+  computerScore = 0;
+  return "You won, congratulations!"
+  }
+else {
+  playerScore = 0;
+  computerScore = 0;
+  return "I'm sorry, win for the computer!"
+}
+}
+
   </script>
 </body>
 </html>
